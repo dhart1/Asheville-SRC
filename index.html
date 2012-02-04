@@ -8,14 +8,6 @@
 <link href="style.css" rel="stylesheet">
     <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script>
-$(document).ready(function() {
-  $("#modal-from-dom").bind('show', function(){	
-	var name = $("#name").val();
-    $("#name_header").text("Hello, " + name);
-	});
-});
-    </script>
 </head>
 <body>
    <div class="topbar">
@@ -25,8 +17,7 @@ $(document).ready(function() {
             </h3>
             <ul class="pills">
                 <li class="active"><a href="index.html">Home</a></li>
-				<li><button data-controls-modal="modal-from-dom"
-			      class="btn">About Us</button></li>
+				<li><a href="about_us.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 </ul>
           <form action="#">
