@@ -4,27 +4,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <meta name="author" content="David Hart">
 <title>Asheville SRC</title>
-<link href="bootstrap-1.1.1.css" rel="stylesheet">
+<link href="bootstrap-1.4.0.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
+    <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+  $("#modal-from-dom").bind('show', function(){	
+	var name = $("#name").val();
+    $("#name_header").text("Hello, " + name);
+	});
+});
+    </script>
 </head>
-<body id="background">
+<body>
    <div class="topbar">
 	<div class="fill">
       <div class="container">
-            <h3><a href="index.html"><img src="logo.jpg" width="192" height="96" alt="logo" longdesc="logo.jpg"></a>
+            <h3><a href="index.html"><img src="logo.jpg" width="192" height="96" alt="logo"></a>
             </h3>
             <ul class="pills">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
+				<li><button data-controls-modal="modal-from-dom"
+			      class="btn">About Us</button></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-          <form action="">
+          <form action="#">
             <input type="text" placeholder="Search" />
           </form>
-          </ul>
-
      </div>
 </div>	
+<div id="modal-from-dom" class="modal hide fade">
+		<div class="modal-header">
+		    <a href="#" class="close">&times;</a>
+			<h3>About Us</h3>
+		</div>
+		<div class="modal-body">
+		    <p>We are here to connect the community with the local business community of Asheville. This is a free service. Enjoy!</p>
+		</div>
+		<div class="modal-footer">
+		</div>
+	</div>
 <div class="row"> <!-- Spacer Row-->
     <div class="span16" >
         <p id="padding">&nbsp;</p>
@@ -32,19 +52,19 @@
   </div>
   <div class="row">
   	<div class="span5 offset4">
-    	<h1 align="center">Offering</h1>
-        <p align="center">Do you have something to offer to the local community of Asheville? Asheville SRC gives you the unique chance to offer your services to the local community!</p>
+    	<h1>Offering</h1>
+        <p>Do you have something to offer to the local community of Asheville? Asheville SRC gives you the unique chance to offer your services to the local community!</p>
     </div>
  	<div class="span5 offset1">
-    	<h1 align="center">Seeking</h1>
-        <p align="center">Are you looking for something local to Asheville? Asheville SRC only promotes local services! You can find anything you need and support the local community!</p>
+    	<h1>Seeking</h1>
+        <p>Are you looking for something local to Asheville? Asheville SRC only promotes local services! You can find anything you need and support the local community!</p>
     </div>
   <div class="row">
   	<div class="span5 offset5">
-		<a href="offering.html"><img src="offering.jpg" width="210" height="150" alt="offering" longdesc="offering.jpg"></a>
+		<a href="offering.html"><img src="offering.jpg" width="210" height="150" alt="offering"></a>
     </div>
  	<div class="span5 offset1">
-		<a href="seeking.html"><img src="seeking.jpg" width="210" height="150" alt="seeking" longdesc="seeking.jpg"></a>
+		<a href="seeking.html"><img src="seeking.jpg" width="210" height="150" alt="seeking"></a>
     </div>    
   </div>
 </div>

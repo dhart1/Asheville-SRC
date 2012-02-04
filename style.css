@@ -4,3 +4,9 @@
 #padding {
 	min-height:100px;
 }
+#center {
+	align:center;
+}
+h1,p {
+	text-align:center;
+}
