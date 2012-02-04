@@ -12,8 +12,10 @@ $(document).ready(function() {
   $("#modal-from-dom").bind('show', function() {
     var name = $("#name").val();
 	var service = $("#service").val();
+	var email = $("#email").val();
     $("#name_header").text("Thanks for joining " + name + "!");
-	$("#mod_bod").text(service);
+	$("#mod_bod").text("Service: " + service);
+	$("#email_name").text("Email: " + email);
   });
 });
     </script>
@@ -54,6 +56,7 @@ $(document).ready(function() {
 
       <div class="modal-body">
         <p id="mod_bod"></p>
+		<p id="email_name"></p>
       </div>
       <div class="modal-footer">
         <a href="#" class="close">Confirm</a>
